@@ -1,0 +1,44 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg);
+  background-image: var(--wallpaper);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 10, 18, 0.72) 0%,
+    rgba(3, 10, 18, 0.82) 50%,
+    rgba(3, 10, 18, 0.94) 100%
+  );
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 0 28px;
+  }
+}
